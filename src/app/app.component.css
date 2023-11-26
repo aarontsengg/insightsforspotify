@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh; /* Ensure the container takes up the full viewport height */
+    padding: 20px; /* Add padding to space the squares from the edges */
+
+  }
+  
+  footer {
+    background-color: #333; /* Set your desired background color */
+    color: #fff; /* Set your desired text color */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .copyright, .disclaimer {
+    margin-bottom: 10px;
+  }
+  

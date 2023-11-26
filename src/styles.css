@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+@font-face {
+    font-family: Varela_Round;
+    src: url('assets/Varela_Round/VarelaRound-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-size: normal;
+}

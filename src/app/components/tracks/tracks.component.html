@@ -1,0 +1,75 @@
+
+<div class="container">
+ <!-- h-100 d-flex justify-content-center align-items-center -->
+  <div id="box1" class ="squareTrack">
+    <h2>Top Tracks for the Last 4 Weeks</h2>
+
+      <div *ngIf="topTracks4Weeks.length > 0">
+
+          <ul class="box">
+            <li class="test" *ngFor="let track of topTracks4Weeks">
+              <img *ngIf="track.album.images.length > 0" [src]="track.album.images[0].url" alt="Album Image" class="album-image">
+
+              <h3 class="tn">{{ track.name }} <a [href]="'https://open.spotify.com/track/' + track.id" target="_blank"><img src="assets/Spotify_logo_without_text.svg.png" alt="Spotify Logo" class="spotify-logo"></a></h3>
+              <p class="art">By: 
+                <span *ngFor="let artist of track.artists; let last = last">
+                  {{ artist.name }}{{ !last ? ', ' : '' }}
+                </span>
+              </p>
+              <p class="alb">Album: {{ track.album.name }}</p>
+
+            </li>
+          </ul>
+          
+        </div>
+        
+  </div>
+
+  <div id="box2" class ="squareTrack">
+    <h2>Top Tracks for the Last 6 Months</h2>
+
+    <div *ngIf="topTracks6Months.length > 0">
+
+        <ul class="box">
+          <li class="test" *ngFor="let track of topTracks6Months">
+            <img *ngIf="track.album.images.length > 0" [src]="track.album.images[0].url" alt="Album Image" class="album-image">
+
+            <h3 class="tn">{{ track.name }}  <a [href]="'https://open.spotify.com/track/' + track.id" target="_blank">  <img src="assets/Spotify_logo_without_text.svg.png" alt="Spotify Logo" class="spotify-logo"></a></h3>
+            <p class="art">By: 
+              <span *ngFor="let artist of track.artists; let last = last">
+                {{ artist.name }}{{ !last ? ', ' : '' }}
+              </span>
+            </p>
+            <p class="alb">Album: {{ track.album.name }}</p>
+
+          </li>
+        </ul>
+        
+      </div>
+      
+</div>
+<div id="box3" class ="squareTrack">
+  <h2>Top Tracks of All Time</h2>
+
+  <div *ngIf="topTracks.length > 0">
+
+      <ul class="box">
+        <li class="test" *ngFor="let track of topTracks">
+          <img *ngIf="track.album.images.length > 0" [src]="track.album.images[0].url" alt="Album Image" class="album-image" >
+
+          <h3 class="tn">{{ track.name }} <a [href]="'https://open.spotify.com/track/' + track.id" target="_blank"><img src="assets/Spotify_logo_without_text.svg.png" alt="Spotify Logo" class="spotify-logo"></a></h3>
+
+          <p class="art">By: 
+            <span *ngFor="let artist of track.artists; let last = last">
+              {{ artist.name }}{{ !last ? ', ' : '' }}
+            </span>
+          </p>
+          <p class="alb">Album: {{ track.album.name }}</p>
+
+        </li>
+      </ul>
+      
+    </div>
+    
+</div>
+</div>

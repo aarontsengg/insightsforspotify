@@ -1,0 +1,74 @@
+.navbar {
+    background-color: rgb(0, 0, 0);
+    height: 120px;
+    display: flex;
+}
+
+.navbar-title {
+    position: absolute;
+    font-size: 60px;
+    color: #1DB954;
+    font-family: 'Varela_Round';
+    margin-left: 2.5%;
+    top: 50%;
+    transform: translate(0%,-50%);
+    animation-name:change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.navbar-title:active{
+  animation-name: move;
+  animation-iteration-count: 1;
+
+}
+
+@keyframes move{
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-50px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes change{
+  0%{color: #1DB954;}
+  50%{color: white;}
+  100%{color: #1DB954;}
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0.5%;
+    display: flex;
+    color: white;
+    font-family: 'Varela_Round';
+    font-size: medium;
+    position: absolute;
+    right: .8%;
+    top: 50%;
+    transform: translate(0%,-50%);
+  }
+  .col-md-8{
+    justify-content: right;
+  }
+
+  .navbar a:hover{
+    color: #1DB954;
+  }
+  
+
+.navbar li {
+  
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+    color: white;
+  }
+
+  .navbar a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;  }
+
+  
+
+  
